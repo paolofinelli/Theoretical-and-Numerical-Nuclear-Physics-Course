@@ -1,1 +1,1 @@
-# Theoretical-and-Numerical-Nuclear-PhYsics-Course
+# Theoretical-and-Numerical-Nuclear-Physics-Course
