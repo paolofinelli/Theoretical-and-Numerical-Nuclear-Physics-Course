@@ -9,7 +9,7 @@ Contents and bibliography (essential bibliography can be found in the forked rep
 
 Bibliography
 
-[1] Lectures by Charlotte Elster http://www.phy.ohiou.edu/~elster/phys755/index.html
+[2a] Lectures by Charlotte Elster http://www.phy.ohiou.edu/~elster/phys755/index.html
 
 3) Many-body approaches to nuclear physics. The concept of the mean field: empirical evidence in atomic and nuclear systems. Shell model approach to the nuclear problem of many body: mean field and residual interaction. Hartree's method for the description of the fundamental state. Iterative method for self-consistent solutions. Introducing the Pauli principle and Hartree-Fock equations. The local and non-local mean field. Numerical implementation. Perturbation theory for many-body systems: time evolution operator, Gell Mann-Low theorem, Goldstone theorem, Feynman-Goldstone diagrams. Brueckner theory for infinite systems: correlation energy, correlated wave functions, Jastrow factors. Numerical implementation for nuclear matter.
 
