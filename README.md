@@ -10,6 +10,7 @@ Contents and bibliography (some additional bibliography can be found in the fork
 On-line Bibliography
 
 [2a] Lectures by Charlotte Elster http://www.phy.ohiou.edu/~elster/phys755/index.html
+
 [2b] Lectures By M. Hjorth Jensen at Twelfth Summer School in Nuclear Physics (2000) Univ. of California http://www.int.washington.edu/NNPSS/2000_talks/jensen.pdf
 
 Textbooks
