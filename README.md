@@ -9,15 +9,22 @@ Contents and bibliography (some additional bibliography can be found in the fork
 On-line Bibliography
 
 [2a] Lectures by Charlotte Elster http://www.phy.ohiou.edu/~elster/phys755/index.html
-[2b] Lectures By M. Hjorth Jensen at Twelfth Summer School in Nuclear Physics (2000) Univ. of California http://www.int.washington.edu/NNPSS/2000_talks/jensen.pdf
+
+[2b] Lectures by M. Hjorth Jensen at Twelfth Summer School in Nuclear Physics (2000) Univ. of California http://www.int.washington.edu/NNPSS/2000_talks/jensen.pdf
+
+[2c] Lectures by Giampaolo Co' (in italian), http://www.dmf.unisalento.it/~gpco/FISMAT/many1819.pdf
 
 Textbooks
 
-[2c] "Advanced Quantum Mechanics", J.J. Sakurai, 
-[2d] "Quantum Mechanics", R. Landau (Wiley ed.)
-[2e] "Computational Nuclear Physics 1", Langanke, Maruhn and Koonin (Springer ed.)
-[2f] "The Quantum Mechanical Few-Body Problem", W. Gloeckle (Springer ed.)
-[2g] "Scattering Theory of Waves and Particles", R.C. Newton
+[2d] "Advanced Quantum Mechanics", J.J. Sakurai, 
+
+[2e] "Quantum Mechanics", R. Landau (Wiley ed.)
+
+[2f] "Computational Nuclear Physics 1", Langanke, Maruhn and Koonin (Springer ed.)
+
+[2g] "The Quantum Mechanical Few-Body Problem", W. Gloeckle (Springer ed.)
+
+[2h] "Scattering Theory of Waves and Particles", R.C. Newton
 
 3) Many-body approaches to nuclear physics. The concept of the mean field: empirical evidence in atomic and nuclear systems. Shell model approach to the nuclear problem of many body: mean field and residual interaction. Hartree's method for the description of the fundamental state. Iterative method for self-consistent solutions. Introducing the Pauli principle and Hartree-Fock equations. The local and non-local mean field. Numerical implementation. Perturbation theory for many-body systems: time evolution operator, Gell Mann-Low theorem, Goldstone theorem, Feynman-Goldstone diagrams. Brueckner theory for infinite systems: correlation energy, correlated wave functions, Jastrow factors. Numerical implementation for nuclear matter.
 
