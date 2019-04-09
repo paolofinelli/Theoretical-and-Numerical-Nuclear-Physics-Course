@@ -9,13 +9,12 @@ List of materials:
 4) Notes about Lippmann-Schwinger equation (greensfuns.pdf and lippschw.pdf)
 5) Summary about scattering theory (scattering1results.pdf)
 6) General notes about mathematical aspects of scattering theory (bessel.pdf and contour.pdf)	
-7) Fortran program for LS equation (tmatrix.f)
+7) Lecture notes by Charlotte Elster (fewblect1.pdf and fewblect2.pdf) 
+8) Fortran program for LS equation (tmatrix.f)
 
 On-line Bibliography
 
-[2a] Lectures by Charlotte Elster http://www.phy.ohiou.edu/~elster/phys755/index.html
-
-[2b] Lectures by M. Hjorth Jensen at Twelfth Summer School in Nuclear Physics (2000) Univ. of California http://www.int.washington.edu/NNPSS/2000_talks/jensen.pdf
+Lectures by M. Hjorth Jensen at Twelfth Summer School in Nuclear Physics (2000) Univ. of California http://www.int.washington.edu/NNPSS/2000_talks/jensen.pdf
 
 Textbooks
 
