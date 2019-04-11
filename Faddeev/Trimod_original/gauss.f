@@ -1,0 +1,29 @@
+      SUBROUTINE GAUSS(A,B,C,N,X,X2,WX)
+C     ==================================
+C     THIS SUBROUTINE DETERMINES GAUSSIAN QUADRATURE POINTS
+C     FOR THE INTERVAL [A,C] WHERE HALF OF THE POINTS LIE
+C     TO THE LEFT AND RIGHT OF B,RESPECTIVELY
+C     THE SUBROUTINE D01BCF FROM THE NAG LIBRARY DETERMINES
+C     THE N GAUSS-POINTS GP AND THE WEIGHTS GW IN THE
+C     INTERVAL  [-1.,1.]
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+
+      DIMENSION X(N),X2(N),WX(N),GW(50),GP(50)
+C
+      IF(N.GT.50)STOP
+c      IF=0
+c      CALL D01BCF(0,-1.d0,1.d0,0.d0,0.d0,N,GW,GP,IF)
+      call gauleg(-1.0d0,1.0d0,GP,GW,N)
+      B1=2.*A*C-A*B-B*C
+      B2=2.*A*(B-C)
+      B3=A-2.*B+C
+      B4=A-C
+      B5=B-C
+      B6=B-A
+      DO1 I=1,N
+      CN=B3*GP(I)+B4
+      X(I)=(B1*(1.+GP(I))+B2)/CN
+      X2(I)=X(I)*X(I)
+    1 WX(I)=X2(I)*2.*B5*B4*B6*GW(I)/CN**2
+      RETURN
+      END

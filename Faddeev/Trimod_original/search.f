@@ -1,0 +1,23 @@
+      SUBROUTINE SEARCH(F1,F2,E1,E2,E3)
+C     ================================
+C
+C     THIS SUBROUTINE IS A SIMPLE SEARCH ROUTINE FOR A ZERO OF A
+C     FUNCTION
+C
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      REAL M,MF
+C
+      PARAMETER(DE=-0.1,HBARC=197.3289,M=938.903,MF=M/HBARC)
+C
+      DATA IV/0/
+C
+      IF(IV.EQ.1)GOTO1
+      V1=SIGN(1.0D0,F1)
+      V2=SIGN(1.0D0,F2)
+      IF(V1.NE.V2)GOTO1
+      E3=E2+(DE/HBARC)*MF
+      RETURN
+    1 E3=E2-F2*(E2-E1)/(F2-F1)
+      IV=1
+      RETURN
+      END
