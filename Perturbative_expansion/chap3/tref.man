@@ -1,0 +1,90 @@
+************************************************************************
+*
+*   - program TREF -  Reference reaction matrix TR in nuclear matter
+*   with local potentials (here REID soft core potentials).
+*
+*   DESCRIPTION   For each angular momentum channel of TR a momentum
+*   space representation is obtained. The subrt. 'kgrid' defines the
+*   desired momentum mesh. The TR components are calculated in position
+*   space, and the subrt.'rgrid' specifies the underlying discretization
+*   mesh used for finding the wavefunctions and performing integrals.
+*   The subrt. 'chanlop' determines the allowed matrix elements and ge-
+*   nerates the output-filenames. From here on, uncoupled and coupled
+*   channels are treated separately and the specific subroutines refer
+*   to this with a suffix "1" and "2". The subroutines 'klop' serve as
+*   control and output routines. After finding the scattered waves in
+*   subrt. 'funcref' the subrt. 'gref' calculate the matrix elements
+*   for each component. The subrt. 'dirpot1' and 'dirpot2' contain the
+*   local potentials.
+*   Optionally, subrt. 'show' outputs some information about the used
+*   meshes etc. and the hermiticity of the matrices is checked by the
+*   routines 'klop'. Furthermore, the core contributions can be monitor-
+*   ed in a separate set of output files.
+*
+*   GLOBAL PARAMETERS & VARIABLES
+*      ntot     number of abscissa points in the position space mesh
+*      ktot     number of abscissa points in the momentum space mesh
+*   They also define the dimensions of any local arrays for ordinates
+*   over the position or momentum mesh, particularly the wavefunctions
+*   and the TR matrices.
+*      j,l,ns   (integer type) represent the quantum numbers J, L and S
+*
+*   GLOBAL COMMON BLOCKS
+*      rmesh    radial position mesh
+*         rad()    radial coordinate
+*         minr     lowest index (origin)
+*         maxr     upper index (cutoff)
+*         matr     matching point, if single channel calculation is done
+*                  w/out the hardcore needed for the coupled cases
+*         mhco     index for hardcore radius
+*      kmesh    radial momentum mesh
+*         pk()     radial momentum
+*         mink     lowest index (usually 1, dennoting the first nonzero)
+*         maxk     upper index  (subspace cutoff)
+*
+*   INPUT   To obtain a set of TR components, the following variables
+*   need to be specified
+*      efm      effective mass parameter
+*      gmasq    healing parameter Õ1/fmþ
+*      nchlo    lowest TR component to be evaluated
+*      nchup    highest TR compnent to be evaluated
+*      prefix   identifying prefix for the output files w/ TR
+*      corefix  prefix for the output files w/ core contributions
+*      chanid() suffixes for the particular projection channels
+*      hcheck   invokes hermiticity check if .true.
+*      display  invokes screen display of the used meshes
+*   These variables are set in the data blocks w/ labels 10 & 11.
+*   Tensor coupled channels must be entered goupwise, following the
+*   scheme provided, since they are calculated simultaneously.
+*   Changes in the position or momentum space meshes can be made in the
+*   subroutines 'rgrid' or 'kgrid'.
+*
+*   OUTPUT   Each angular momentum component of TR is assigned an out-
+*   file named 'prefix'//chanid()', e.g. "TRF110" for j=1,l=1,s=0. Thus,
+*   the suffix stands for the angular quantum numbers jls. The coupled
+*   channels are labeled with a "C" instead "1" for s=1. The hermitian
+*   conjugates of "TRF10C" is labeled "TRF1CC" . Each output file con-
+*   ains the effective mass and healing parameters, the momentum mesh
+*   and the TR matrix elements. They are formatted as in subroutines
+*   'klop1' & 'klop2'. A similar set of files can be produced for the
+*   contributions from the (artificial) hard core. Their prefix is de-
+*   fined by 'corefix'.
+*
+*   REMARKS
+*   - For a coordinate mesh with variable stepsize the method of poly-
+*   nomial extrapolation at the joints is justified essentially a post-
+*   eriori. The hermiticity of the TR matrices provides a sensible test
+*   of the method. In any case, the accuracy w/ variable stepsizes is
+*   sufficient for a quick, first calculation which can then be refined
+*   using a uniform mesh.
+*   - Under VAX VMS Fortran, this code should be compiled using the
+*   G_floating representation for DOUBLE PRECISION type variables.
+*
+*   Martin Fuchs  &  Philip J. Siemens
+*   Department of Physics
+*   Oregon State University
+*   Corvallis, Oregon
+*
+*   June 1991
+*
+************************************************************************

@@ -1,0 +1,22 @@
+ipr1  2 ipr2 0 ipr3 0 ipr4 0 IINT 1
+iwie  0
+nrm  20 l1   0 l2   2 spi  1 jot  1 ncm  1 lcm  0
+osla 1.767777  w    -50.0
+ipau  2 eden 5 npm1 1 npm2 1
+iwie  1
+nrm  20 l1   1 l2   1 spi  0 jot  1 ncm  1 lcm  0
+osla 1.767777  w    -50.0
+ipau  2 eden 5 npm1 1 npm2 1
+iwie  1
+nrm  20 l1   0 l2   0 spi  0 jot  0 ncm  1 lcm  0
+osla 1.767777  w    -50.0
+ipau  2 eden 5 npm1 1 npm2 1
+iwie  1
+nrm  20 l1   1 l2   1 spi  1 jot  0 ncm  1 lcm  0
+osla 1.767777  w    -50.0
+ipau  2 eden 5 npm1 1 npm2 1
+iwie  1
+nrm  20 l1   1 l2   1 spi  1 jot  1 ncm  1 lcm  0
+osla 1.767777  w    -50.0
+ipau  2 eden 5 npm1 1 npm2 1
+iwie  3

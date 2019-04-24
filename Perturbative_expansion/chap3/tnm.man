@@ -1,0 +1,108 @@
+************************************************************************
+*    - program TNM  -  Reaction Matrix in Nuclear Matter.
+*
+*   DESCRIPTION   The code follows Legindgaard's prescription with an
+*   angle averaged Pauli operator. The input consists of the various
+*   angular momentum components of the reference reaction matrix TR in
+*   momentum space representation, the reference spectrum and the single
+*   particle nuclear matter spectrum; it is described below.
+*   The subroutine 'connect' groups the TR components according to their
+*   spin and their parity in 4 groups, which are then processed separa-
+*   tely. In the subrt. 'polyprop' the Legindgaard representation of the
+*   angle averaged difference of the reference and the nuclear matter
+*   propagators is generated. The subrt. 'grtrafo' and 'grlegin' obtain
+*   the polynomial representation of the TR components. The correction
+*   T - TR is calculated for each spin/ parity subgroup by 'lgnuc'. The
+*   subrt. 'lgback' transforms this difference back to momentum space
+*   and it is then added to the input TR components to yield the compo-
+*   nents of T.
+*   Optionally, the convergence of the polynomial representation can be
+*   checked by comparing the inverse transformation of TR and the origi-
+*   nal in the subrt. 'grtest'. The subrt. 'show' displays information
+*   about the channel numbering and physical parameters.
+*
+*   GLOBAL PARAMETERS (Array dimensions)
+*      ktot      maximum number of abscissa points on any momentum mesh
+*      nmx       maximum number of input files
+*      mmx       maximum polynomial degree + 1 (order of polynomial)
+*      lpmx      number of coupling by the Pauli operator, here always
+*                lpmx=1 (angle averaged)
+*      nqmx      maximum size of the spin/parity groups
+*      ip        maximum size of matrices during execution
+*
+*   GLOBAL COMMON BLOCKS
+*      grpoly    TR-components in polynomial representation
+*         gref()   <jls n|TR|JLS N>
+*      info      contains parameters from 2nd line of the header file
+*         ...(see below)...
+*      kmesh     radial momentum mesh, dependent of input files
+*         mxk      upper index (usually the subspace cutoff)
+*         pk()     radial momentum from k=1...mxk
+*      polys     contains the Legindgaard polynomials on 'kmesh'
+*         plegin() polynomial of degree & momentum
+*      qnmap     spin/parity subgroups ("allowed matrix elements")
+*         link()    contains the channel number if TR element is allowed
+*         lpauli()  Kronecker delta for Pauli operator w/ lpmx=1
+*         ndim()    dimension of subgroup
+*      Only 'info' is static.
+*
+*   OTHER VARIABLES IN MAIN
+*      chanid()  input filenames
+*      grecor()  T-TR in Legindgaard representation
+*      propag()  propagator difference in Legindgaard representation
+*      kmix      indicates wether different momentum meshes were read
+*      ngroup    label for spin/parity groups (1...4)
+*      lpup      highest Pauli coupling
+*      njup      highest value of quantum number J
+*
+*   INPUT FROM FILES   The physical parameters are read from the header
+*   file named 'headfile' together with the nuclear matter spectrum, the
+*   order of the polynomial representation and the identifying prefixes
+*   for the input and output files. In order of read-in:
+*      memo      user memnonic transfered to output
+*      efm       reference spectrum effective mass (from TR input files)
+*      gmasq     reference spectrum healing parameter
+*      pfm       Fermi momentum       pav      Average momentum
+*      pkmx      momentum cut-off     emev     starting energy
+*      mup,mdgr  polynomial order     kup      number of spectrum values
+*      inid      input prefix         outid    output prefix
+*      ptab()    single particle momenta for nuclear matter spectrum
+*      espect()  single particle nuclear matter spectrum
+*   The TR components are read in the subrt. 'lkmesh', the name conven-
+*   tion is explained with subrt. 'connect'.
+*
+*   INPUT FROM THE CODE  Before TNM can be run, the variables in the
+*   data block with label 10 need to be specified.
+*      headfile  name of the header file
+*      ngrplo    lowest spin/parity group to be processed  (1...4)
+*      ngrpup    highest spin/parity group to be processed (1...4)
+*      hbo       .true. if display of parameters and files is desired
+*      testid    identifying prefix for output from 'grtest'
+*      test      .true. if 'grtest' should run
+*
+*   OUTPUT  The T components are outputted to files in the same way the
+*   input files were arranged, see text for their format. If 'grtest'
+*   runs, an extra set of files is produced (see comments there).
+*
+*   REMARKS
+*   -   Different momentum meshes in the input files are allowed
+*   if the physical parameters are consistent (cut-off etc.). However,
+*   the polynomials have to be recalculated several times then.
+*   -   If J > 2 the array dimension have to be adjusted.
+*   -   The storage convention for all 2-dimensional arrays is that the
+*   1st index refers to the "bra" and the 2nd to the "ket". For example:
+*                   < i | V | j > == V(i,j)
+*   -   Simpson's Rule is used for the transformation of TR, with the
+*   the origin (pk=0) left out. The TR input files have to contain an
+*   EVEN number of mesh POINTS.
+*   -   For non-parabolic single particle spectra, the order of the in-
+*   terpolating polynomial and the convergence of the angle averaging
+*   should be checked.
+*
+*   Martin Fuchs & Philip J. Siemens
+*   Department of Physics
+*   Oregon State University
+*   Corvallis, Oregon
+*
+*   June 1991.
+************************************************************************

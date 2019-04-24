@@ -1,0 +1,111 @@
+
+
+
+
+
+           REACTION MATRIX ELEMENTS IN OSCILLATOR BASI  S
+           FOR (L1,L2) = ( 0, 2), S =  1, J =  1 AND (NCM,LCM) = ( 0,0).
+           20 OSCILLATOR STATES WERE TAKEN INTO ACCOUNT.
+           THE SUM OF THE SINGLE-PARTICLE ENERGIES IS OMEGA =  -50.00 MEV.
+           THE OSCILLATOR LENGTH IS    1.77 FM.
+           THE OSCILLATOR ENERGY IS  13.27 MEV.
+
+
+
+
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  0 -7.3761E+00-6.3498E+00
+ N,L=    2  0 -6.3498E+00-5.4949E+00
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  0 -5.3395E+00-7.4927E+00
+ N,L=    2  0 -2.7283E+00-5.2681E+00
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  2 -5.3395E+00-2.7283E+00
+ N,L=    2  2 -7.4927E+00-5.2681E+00
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  2  1.2249E+00 1.1006E+00
+ N,L=    2  2  1.1006E+00 1.3673E+00
+
+
+
+
+           REACTION MATRIX ELEMENTS IN OSCILLATOR BASI  S
+           FOR (L1,L2) = ( 1, 1), S =  0, J =  1 AND (NCM,LCM) = ( 0,0).
+           20 OSCILLATOR STATES WERE TAKEN INTO ACCOUNT.
+           THE SUM OF THE SINGLE-PARTICLE ENERGIES IS OMEGA =  -50.00 MEV.
+           THE OSCILLATOR LENGTH IS    1.77 FM.
+           THE OSCILLATOR ENERGY IS  13.27 MEV.
+
+
+
+
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  1  1.2906E+00 1.9633E+00
+ N,L=    2  1  1.9633E+00 3.0597E+00
+
+
+
+
+           REACTION MATRIX ELEMENTS IN OSCILLATOR BASI  S
+           FOR (L1,L2) = ( 0, 0), S =  0, J =  0 AND (NCM,LCM) = ( 0,0).
+           20 OSCILLATOR STATES WERE TAKEN INTO ACCOUNT.
+           THE SUM OF THE SINGLE-PARTICLE ENERGIES IS OMEGA =  -50.00 MEV.
+           THE OSCILLATOR LENGTH IS    1.77 FM.
+           THE OSCILLATOR ENERGY IS  13.27 MEV.
+
+
+
+
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  0 -6.0237E+00-4.9147E+00
+ N,L=    2  0 -4.9147E+00-4.2852E+00
+
+
+
+
+           REACTION MATRIX ELEMENTS IN OSCILLATOR BASI  S
+           FOR (L1,L2) = ( 1, 1), S =  1, J =  0 AND (NCM,LCM) = ( 0,0).
+           20 OSCILLATOR STATES WERE TAKEN INTO ACCOUNT.
+           THE SUM OF THE SINGLE-PARTICLE ENERGIES IS OMEGA =  -50.00 MEV.
+           THE OSCILLATOR LENGTH IS    1.77 FM.
+           THE OSCILLATOR ENERGY IS  13.27 MEV.
+
+
+
+
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  1 -1.8135E+00-1.3037E+00
+ N,L=    2  1 -1.3037E+00-1.1823E+00
+
+
+
+
+           REACTION MATRIX ELEMENTS IN OSCILLATOR BASI  S
+           FOR (L1,L2) = ( 1, 1), S =  1, J =  1 AND (NCM,LCM) = ( 0,0).
+           20 OSCILLATOR STATES WERE TAKEN INTO ACCOUNT.
+           THE SUM OF THE SINGLE-PARTICLE ENERGIES IS OMEGA =  -50.00 MEV.
+           THE OSCILLATOR LENGTH IS    1.77 FM.
+           THE OSCILLATOR ENERGY IS  13.27 MEV.
+
+
+
+
+
+
+            GNN    1          2          3          4          5
+ N,L=    1  1  1.8619E+00 2.1123E+00
+ N,L=    2  1  2.1123E+00 2.8102E+00

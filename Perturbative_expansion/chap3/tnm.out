@@ -1,0 +1,60 @@
+
+
+                   ***** T N M *****
+
+ Nuclear Matter Effective Interaction: The Reaction Matrix.
+
+         Martin Fuchs  &  Philip J. Siemens
+         Department of Physics
+         Oregon State University
+         Corvallis, OR 97331
+         U.S.A.
+
+         June 15, 1991
+
+
+
+
+PAUSE: To resume execution, type:   go
+Any other input will terminate the program.
+go
+Execution resumed after PAUSE.
+
+
+ ARRAY DIMENSIONS :
+
+ Momentum Mesh Size KTOT   :   64     Channel Numbers NMX  :  12
+ Polynomial Order MMX      :    8     Pauli Coupling LPMX  :   1
+ Maximum Matrix Size IP    :   40
+
+
+ PRESENT VALUES :
+
+ Fermi Momentum PFM        :   1.3000 1/fm .
+ Average Momentum PAV      :   0.7000 1/fm .
+ Cut-Off Momentum PKMX     :   2.8000 1/fm .
+ Starting Energy ESTART    :   3.9137 * 41.47 MeV .
+ Healing Parameter GMASQ   :   1.4000 1/fmª2 .
+ Effective Mass EFM        :   1.0000 .
+ Highest Polynomial MUP-1  :   4 .
+ Nuclear Matter Spectrum on  20 points.
+
+
+ FILENAMES for Angular Momentum Channels :
+
+      Label       Inputfile   Outputfile    j  l  s
+
+         1          TRF110       SAM110     1  1  0
+         2          TRF000       SAM000     0  0  0
+         3          TRF220       SAM220     2  2  0
+         4          TRF011       SAM011     0  1  1
+         5          TRF111       SAM111     1  1  1
+         6          TRF211       SAM211     2  1  1
+         7          TRF21C       SAM21C     2  1  C
+         8          TRF231       SAM231     2  3  1
+         9          TRF101       SAM101     1  0  1
+        10          TRF10C       SAM10C     1  0  C
+        11          TRF121       SAM121     1  2  1
+        12          TRF221       SAM221     2  2  1
+
+   ...
