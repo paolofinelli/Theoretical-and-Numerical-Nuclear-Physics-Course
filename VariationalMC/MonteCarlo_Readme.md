@@ -6,5 +6,6 @@ List of documents
 F. Pederiva, A. Roggero, and K. E. Schmidt
 4) "Lectures on Quantum Monte Carlo", D. M. Ceperley
 5) "Lectures on Quantum Monte Carlo", R. Fantoni
+6) "Lectures on Monte Carlo Techniques", M. Hjorth-Jensen
 
 
